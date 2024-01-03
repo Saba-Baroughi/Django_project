@@ -28,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^5&runyqw!2yvqf5z*b#g$_t6@u@!f2)h!97$*+0rl92fe2*nj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1' ,'.herokuapp.com']
 
 
 # Application definition
@@ -97,6 +97,10 @@ DATABASES = {
     }
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeanyapp.com",
+    "https://*.herokuapp.com"
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
